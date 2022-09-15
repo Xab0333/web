@@ -1,4 +1,4 @@
-alert("Hola");
+
 function guardar(){
     db.collection("usuarios").add({
         Nombre: document.getElementById("name"),
