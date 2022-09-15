@@ -1,3 +1,4 @@
+alert("hola alerta");
 import firebase from "firebase/app";
 import "firebase/firestore";
 
