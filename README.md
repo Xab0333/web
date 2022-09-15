@@ -1,3 +1,3 @@
 # web
-Xab0333.github.io
+Xab0333.github.io/web
 
