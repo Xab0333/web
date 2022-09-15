@@ -1,8 +1,8 @@
 
 function guardar(){
     db.collection("usuarios").add({
-        Nombre: document.getElementById("name"),
-        Apellido: document.getElementById("last"),
+        nombre: document.getElementById("name").value,
+        apellido: document.getElementById("last").value,
        
     })
     .then((docRef) => {

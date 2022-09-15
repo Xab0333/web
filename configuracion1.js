@@ -3,12 +3,12 @@
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 firebase.initializeApp({
-    apiKey: "AIzaSyBkMAUTul6xMJWskfA4LPSjjaxBhrjNgXM",
-    authDomain: "festive-post-319011.firebaseapp.com",
-    projectId: "festive-post-319011",
-    storageBucket: "festive-post-319011.appspot.com",
-    messagingSenderId: "1008310346429",
-    appId: "1:1008310346429:web:46b988a0d62ae5e56e8dd4"
+    apiKey: "AIzaSyBXQ55L3w6vU8ULVGEKvSQPa2ln_vvDQ64",
+  authDomain: "data-4f223.firebaseapp.com",
+  projectId: "data-4f223",
+  storageBucket: "data-4f223.appspot.com",
+  messagingSenderId: "495284296572",
+  appId: "1:495284296572:web:7f39c4295b4bc3f93ba2f9"
 });
 
 
