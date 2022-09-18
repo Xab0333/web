@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,22 +9,34 @@
   <title>XabierWeb </title>
 </head>
 <body>
+  <header>
+    <h1>XabierIntranet</h1>
+  </header>
   <div class="container">
      <div class="row">
-      <form>
+      <h1>Acceso privado</h1>
+      <form class="passcheck">
         <div class="mb-3">
           <label for="exampleInputEmail1">Nombre </label>
           <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
       
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Apellido</label>
+          <label for="exampleInputPassword1">Contraseña</label>
           <input type="text" class="form-control" id="last">
         </div>
-        
+        <button href="#"class="btn btn-primary" onclick="guardar()">Enviar</button>
       </form> 
-      <button  class="btn btn-primary" onclick="guardar()">Enviar</button>
+     
      </div>
+  </div>
+  <div class="box">
+    <h1>Acceso rápido</h1>
+    <ul>
+      <p><a href="https://view.genial.ly/6206423617f6d00018aa267f/presentation-grafeno-xabier-novoa-gomez">Presentación</a></p>
+      <p>Exercise</p>
+      <p>Cheer up friend</p>
+    </ul>
   </div>
   
 </body> 
@@ -40,4 +53,5 @@
 
 <script src="config.js"> </script>
 <script src="guardar.js"> </script>
+
 </html>

@@ -1,0 +1,46 @@
+header{
+    padding: 10px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-color: rgb(228, 212, 212);
+}
+
+header h1{
+    margin:10px;
+}
+
+div.container {
+    float: left;
+    width: auto;
+    height: auto;
+    margin-left: 10%;
+}
+div.row h1{
+    margin-bottom: 5%;
+}
+
+form label {
+    width: auto;
+    padding-right: 5%;
+    
+}
+
+form div {
+    margin-bottom: 10px;
+    
+}
+
+div.box{
+    float:right;
+    margin-right: 10%;
+    width: auto;
+    height: auto;
+    padding: 4%;
+    border-radius: 4%;
+    background-color: aquamarine;
+    
+}
+div.box ul p a{
+    text-decoration: none;
+    color: black;
+}
