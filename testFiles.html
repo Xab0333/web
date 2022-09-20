@@ -1,20 +1,69 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Subir archivos con Firebase</title>
 </head>
 <body>
-    <input type="file" multiple onchange="processSelectedFiles(this)">
-</body>
-<script>
-function processSelectedFiles(fileInput) {
-    var files = fileInput.files;
+  <input type="file" id="campoarchivo">
+  <div id="mensaje"></div>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
   
-    for (var i = 0; i < files.length; i++) {
-      alert("Filename " + files[i].name);
+  <!--Importamos firebase cloud-->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <!--Importamos scripts nativos-->
+  
+  <script type="module" src="config.js"> </script>
+  <script>
+    // Initialize Fireb
+
+    // Servicios de APIs Firebase
+
+    window.onload = function() {
+      // realizamos la autenticación anónima (debe estar activada en la consola de Firebase)
+
+      // asociamos el manejador de eventos sobre el INPUT FILE
+      document.getElementById('campoarchivo').addEventListener('change', function(evento){
+        evento.preventDefault();
+        var archivo  = evento.target.files[0];
+        subirArchivo(archivo);
+      });
     }
-  }</script>
+
+    // función que se encargará de subir el archivo
+    function subirArchivo(archivo) {
+      // creo una referencia al lugar donde guardaremos el archivo
+      var refStorage = firebase.storage().ref('micarpeta').child(archivo.name);
+      // Comienzo la tarea de upload
+      var uploadTask = refStorage.put(archivo);
+
+      // defino un evento para saber qué pasa con ese upload iniciado
+      uploadTask.on('state_changed', null,
+        function(error){
+          console.log('Error al subir el archivo', error);
+        },
+        function(){
+          console.log('Subida completada');
+          mensajeFinalizado(uploadTask.snapshot.downloadURL, uploadTask.snapshot.totalBytes);
+        }
+      );
+    }
+
+    // a esta función la invocamos para mostrar el mensaje final después del upload
+    function mensajeFinalizado(url, bytes) {
+      var elMensaje = document.getElementById('mensaje');
+      var textoMensaje = '<p>Subido el archivo!';
+      textoMensaje += '<br>Bytes subidos: ' + bytes;
+      textoMensaje += '<br><a href="' + url + '">Ver el fichero</a></p>';
+      elMensaje.innerHTML = textoMensaje;
+    }
+  </script>
+</body>
 </html>
