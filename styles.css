@@ -8,7 +8,7 @@ header{
     padding: 10px;
     margin-right: auto;
     margin-bottom: 50px;
-    background-color: #212529;
+    background-color: #000000;
 }
 
 header h1{
@@ -119,4 +119,8 @@ footer{
   button.w-100\ btn\ btn-lg\ btn-secondary{
     margin-top: 10px;
     border-radius: 100px;
+  }
+
+  a.d-block\ link-dark\ text-decoration-none\ dropdown-toggle{
+    margin: 121320px;
   }
