@@ -13,9 +13,12 @@ function guardar(){
     });
 }
 
+
+
+
 //Subir archivos a Firebase Storage
 //Cuando la página acaba de cargarse, se ejecuta la función
-window.onload = function() {
+ /* window.onload = function() {
     
 
     //Identificamos el elemento que queremos y con el 'event listener' hacemos que se ejecute la función cunado cambie el id="campoarchivo"
@@ -27,7 +30,7 @@ window.onload = function() {
       subirArchivo(archivo);
     });
   }
-
+*/
 
 function subirArchivo(archivo) {
    
