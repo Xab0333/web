@@ -7,6 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XabierWeb </title>
+  <link rel="apple-touch-icon" href="https://xab0333.github.io/web/train-front-fill.svg" sizes="180x180">
+<link rel="icon" href="https://xab0333.github.io/web/train-front-fill.svg" sizes="32x32" type="image/png">
+<link rel="icon" href="https://xab0333.github.io/web/train-front-fill.svg" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://xab0333.github.io/web/train-front-fill.svg">
+<link rel="mask-icon" href="https://xab0333.github.io/web/train-front-fill.svg" color="#712cf9">
+<link rel="icon" href="">
 </head>
 <body>
   <header>
@@ -14,7 +20,7 @@
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
       </a>
-
+      <h1>Stacion</h1>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="#" class="nav-link px-2 text-secondary">Inicio</a></li>
         <li><a href="#" class="nav-link px-2 text-white">Acceso público</a></li>
@@ -24,29 +30,12 @@
       </ul>
 
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">Login</button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
+        <button type="button" href="/sign-in.html" class="btn btn-outline-light me-2">Login</button>
+        <button type="button" href="" class="btn btn-warning">Sign-up</button>
       </div>
     </div>
   </header>
   <class="container">
-     <div class="row">
-      <h1>Acceso privado</h1>
-      <form class="passcheck">
-        <div class="mb-3">
-          <label for="exampleInputEmail1">Nombre </label>
-          <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
-      
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1">Contraseña</label>
-          <input type="text" class="form-control" id="last">
-        </div>
-        <button href="#"class="btn btn-primary" onclick="guardar()">Enviar</button>
-      </form> 
-     
-     </div>
-
   <div class="box">
     <h1>Acceso rápido</h1>
     <ul>
@@ -71,6 +60,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+
 <!--Importamos scripts nativos-->
 
 <script type="module" src="config.js"> </script>

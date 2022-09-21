@@ -12,6 +12,8 @@ function guardar(){
         alert("Error en el registro");
     });
 }
+
+//Subir archivos a Firebase Storage
 //Cuando la página acaba de cargarse, se ejecuta la función
 window.onload = function() {
     
@@ -46,5 +48,8 @@ function subirArchivo(archivo) {
       );
     }
    
+
+  
+
   
  
