@@ -35,15 +35,16 @@
 
       <div class="text-end">
         
-            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle = "dropdown" aria-expanded="false">
               <img src="https://firebasestorage.googleapis.com/v0/b/data-4f223.appspot.com/o/micarpeta%2Fmonta%C3%B1as.jpg?alt=media&token=c2474bee-c99d-48f7-b764-0966e4dfe605" alt="mdo" width="32" height="32" class="rounded-circle">
             </a>
-            <ul class="dropdown-menu text-small" style="">
+            <ul class="dropdown-menu text-small">
               <li><a class="dropdown-item" href="#">Nueva nota</a></li>
               <li><a class="dropdown-item" href="#">Configuración</a></li>
               <li><a class="dropdown-item" href="#">Perfil</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <li><a class="dropdown-item" href="#">
+                <button class="w-100 btn btn-lg btn-secondary" href="#" onclick="cerrarSesion()">Sign out</button></a></li>
             </ul>
           
       </div>
@@ -56,4 +57,5 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 </html>

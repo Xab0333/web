@@ -9,7 +9,8 @@ var firebaseConfig = {
   storageBucket: "data-4f223.appspot.com",
   messagingSenderId: "495284296572",
   appId: "1:495284296572:web:7f39c4295b4bc3f93ba2f9",
-  storageBucket: "gs://data-4f223.appspot.com"
+  storageBucket: "gs://data-4f223.appspot.com",
+  databaseURl: "https://data-4f223-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 
@@ -21,3 +22,4 @@ var db = firebase.firestore();
 // Initialize Cloud Firestore and get a reference to the service
 const storage = firebase.storage();
 const auth = firebase.auth(); 
+var database = firebase.database();
